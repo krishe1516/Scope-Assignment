@@ -14,15 +14,16 @@ class Student
 
     display()
     {
-        document.write('Name:' +this.name);
-        document.write('Marks:' +this.m1+ ',' +this.m2+ 'and' +this.m3);
-        document.write('Maximum Marks:' +this.max);
-        document.write('Average:' +this.avg)
+        _proto_:this.compute();
+        document.write('Name:' +this.name +"<br>");
+        document.write('Marks:' +this.m1+ ',' +this.m2+ 'and' +this.m3 +"<br>");
+        document.write('Maximum Marks:' +this.max +"<br>");
+        document.write('Average:' +this.avg +"<br>")
     }
 
     compute()
     {
-       max=Math.max(Math.max(this.m1,m2),this.m3);
+       this.max=Math.max(Math.max(this.m1,this.m2),this.m3);
        this.avg=((this.m1+this.m2+this.m3)/3);
 
      
